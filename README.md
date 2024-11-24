@@ -38,42 +38,38 @@ Prepare your data in the WebDataset format, where each `.tar` file contains pair
 
 **Example Archive Structure:**  
 
-shard-00000.tar
-├── sample_00000.jpg
-├── sample_00000.txt
-├── sample_00001.jpg
-├── sample_00001.txt
-└── ...
+
+- **sample_00000.jpg**: The image file.  
+- **sample_00000.txt**: The text description corresponding to the image.  
 
 
-Usage
-1. Open the Notebook
+## Usage
+### 1. Open the Notebook
 Open the provided Jupyter Notebook file (improve-dalle2-part-3-75-dataset.ipynb) in your environment (e.g., Jupyter Lab, Colab, or Kaggle).
 
-2. Install Dependencies
-Install required Python packages:
+### 2. Install Dependencies
+Install required Python packages
 
-bash
-Copy code
-pip install webdataset clip-by-openai torch torchvision tqdm  
-3. Configure Paths
+### 3. Configure Paths
 Set the path to your WebDataset .tar files in the notebook.
 Specify hyperparameters like batch size, learning rate, and latent dimensions in the configuration cells.
-4. Run Training
+### 4. Run Training
 Execute the cells in sequence to:
 
-Load the WebDataset shards.
-Encode text descriptions into CLIP embeddings.
-Train the prior model to map text embeddings to image embeddings.
-Train the decoder model for image generation.
-5. Generate Images
+#### Load the WebDataset shards.
+#### Encode text descriptions into CLIP embeddings.
+#### Train the prior model to map text embeddings to image embeddings.
+#### Train the decoder model for image generation.
+
+
+### 5. Generate Images
 Run the inference section of the notebook to generate images from textual descriptions.
 
-Example Text Input:
 
-arduino
-Copy code
-"A futuristic cityscape with flying cars and neon lights."  
-Generated Output:
+#### Example Text Input:
+```bash
+"Laptop on Table"
+```
+#### Generated Output:
 An image that visually represents the text input.
 
